@@ -1391,6 +1391,8 @@ export class QueryManager<TStore> {
       oldNetworkStatus !== networkStatus &&
       isNetworkRequestInFlight(networkStatus);
 
+    console.log(`fetchQueryByPolicy - ${fetchPolicy}`);
+
     switch (fetchPolicy) {
     default: case "cache-first": {
       const diff = readCache();
